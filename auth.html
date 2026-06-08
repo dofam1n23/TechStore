@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">TechStore</div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="cart.html">Корзина</a>
+            <a href="auth.html">Вход/Регистрация</a>
+        </nav>
+        <div class="cart-icon">
+            🛒 <span id="cart-count">0</span>
+        </div>
+        <div id="user-greeting"></div>
+    </header>
+    <main>
+        <div class="auth-container">
+            <div class="tabs">
+                <button onclick="showTab(0)">Регистрация</button>
+                <button onclick="showTab(1)">Вход</button>
+            </div>
+            <div id="register-form">
+                <input type="text" id="reg-name" placeholder="Имя">
+                <input type="email" id="reg-email" placeholder="Email">
+                <input type="password" id="reg-password" placeholder="Пароль">
+                <button onclick="register()">Зарегистрироваться</button>
+            </div>
+            <div id="login-form" style="display:none;">
+                <input type="email" id="login-email" placeholder="Email">
+                <input type="password" id="login-password" placeholder="Пароль">
+                <button onclick="login()">Войти</button>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
